@@ -25,13 +25,13 @@ import { OrderItem } from './orders/entities/order-item.entity';
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
         type: 'postgres',
-        host: config.get('DB_HOST', 'localhost'),
+        host: config.get('DB_HOST', 'postgres'),
         port: parseInt(config.get('DB_PORT', '5432'), 10),
-        username: config.get('DB_USERNAME', 'postgres'),
-        password: config.get('DB_PASSWORD', 'postgres'),
-        database: config.get('DB_NAME', 'ecommerce'),
+        username: config.get('DB_USERNAME', 'pimpcom'),
+        password: config.get('DB_PASSWORD', 'pimpcom'),
+        database: config.get('DB_NAME', 'pimpcomdb'),
         entities: [User, Category, Product, Cart, CartItem, Order, OrderItem],
-        synchronize: true, // dev only — use migrations in production
+        synchronize: true, 
         autoLoadEntities: true,
       }),
     }),

@@ -7,9 +7,9 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2 font-display text-lg font-bold">
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-500 text-xs text-white">
-              F
+              P
             </span>
-            Fieldstock
+            Pimpcom
           </div>
           <p className="mt-3 max-w-xs text-sm text-ink/60">
             Everyday goods, thoughtfully sourced. Electronics, apparel, home essentials and books — picked to last.
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-line py-5 text-center text-xs text-ink/40">
-        © {new Date().getFullYear()} Fieldstock. All rights reserved.
+        © {new Date().getFullYear()} Pimpcom. All rights reserved.
       </div>
     </footer>
   );

@@ -19,14 +19,14 @@ export default function Navbar() {
       <div className="container-page flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-display text-xl font-bold tracking-tight">
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-500 text-sm text-white">
-            F
+            P
           </span>
-          Fieldstock
+          Pimpcom 
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           <Link href="/products" className="text-sm font-medium text-ink/70 hover:text-ink">
-            Shop
+            Shop  
           </Link>
           {user && (
             <Link href="/orders" className="text-sm font-medium text-ink/70 hover:text-ink">

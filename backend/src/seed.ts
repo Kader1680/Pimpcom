@@ -6,18 +6,29 @@ import { User } from './users/entities/user.entity';
 import { Category } from './categories/entities/category.entity';
 import { Product } from './products/entities/product.entity';
 import { Role } from './common/role.enum';
-
+import { Cart } from './cart/entities/cart.entity';
+import { CartItem } from './cart/entities/cart-item.entity';
+import { Order } from './orders/entities/order.entity';
+import { OrderItem } from './orders/entities/order-item.entity';
 dotenv.config();
 
 async function seed() {
-  const dataSource = new DataSource({
+    const dataSource = new DataSource({
     type: 'postgres',
     host: process.env.DB_HOST || 'localhost',
     port: parseInt(process.env.DB_PORT || '5432', 10),
     username: process.env.DB_USERNAME || 'postgres',
     password: process.env.DB_PASSWORD || 'postgres',
     database: process.env.DB_NAME || 'ecommerce',
-    entities: [User, Category, Product],
+    entities: [
+      User,
+      Category,
+      Product,
+      Cart,
+      CartItem,
+      Order,
+      OrderItem,
+    ],
     synchronize: true,
   });
 
@@ -41,7 +52,6 @@ async function seed() {
     console.log(`Created admin user: ${adminEmail} / Admin123!`);
   }
 
-  // Sample customer
   const customerEmail = 'customer@shop.com';
   let customer = await userRepo.findOne({ where: { email: customerEmail } });
   if (!customer) {
@@ -55,7 +65,6 @@ async function seed() {
     console.log(`Created customer user: ${customerEmail} / Customer123!`);
   }
 
-  // Categories
   const categoryData = [
     { name: 'Electronics', slug: 'electronics', description: 'Gadgets and devices' },
     { name: 'Clothing', slug: 'clothing', description: 'Apparel and accessories' },
@@ -73,7 +82,6 @@ async function seed() {
     categories.push(cat);
   }
 
-  // Products
   const productData = [
     {
       name: 'Wireless Headphones',
@@ -162,7 +170,7 @@ async function seed() {
     }
   }
 
-  console.log('Seed complete ✅');
+  console.log('Seed complete');
   await dataSource.destroy();
 }
 
