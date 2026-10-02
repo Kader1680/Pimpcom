@@ -38,7 +38,6 @@ async function seed() {
   const categoryRepo = dataSource.getRepository(Category);
   const productRepo = dataSource.getRepository(Product);
 
-  // Admin user
   const adminEmail = 'admin@shop.com';
   let admin = await userRepo.findOne({ where: { email: adminEmail } });
   if (!admin) {

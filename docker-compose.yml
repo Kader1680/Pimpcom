@@ -16,7 +16,7 @@ services:
       - /app/node_modules
 
   frontend:
-    container_name: frontend
+    container_name: client
     build:
       context: ./frontend
       dockerfile: Dockerfile
