@@ -1,4 +1,4 @@
-# Fieldstock — Full-Stack E-Commerce (Next.js + NestJS + PostgreSQL)
+# Pimpcom — Full-Stack E-Commerce (Next.js + NestJS + PostgreSQL)
 
 A complete e-commerce system:
 
@@ -10,6 +10,10 @@ A complete e-commerce system:
 ## High Level Project structure
 
 <img width=900 src="/images/Highlevel.png" />
+
+## Design Database 
+
+<img width=900 src="/images/designdatbase.png" />
 
 ## 1. Project structure
 
