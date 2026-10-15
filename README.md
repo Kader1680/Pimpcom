@@ -7,6 +7,9 @@ A complete e-commerce system:
 - **Features**: storefront (home, product listing, product detail, cart, checkout, order history) and a full admin panel (dashboard, products CRUD, categories CRUD, order management, user management)
 
 ---
+## High Level Project structure
+
+<img width=900 src="/images/Highlevel.png" />
 
 ## 1. Project structure
 
